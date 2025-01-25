@@ -1,7 +1,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
 &lt { flavor = "hold-preferred"; };
@@ -87,7 +86,7 @@
             bindings = <
 &kp TAB               &kp Q  &kp W  &kp E                    &kp R                     &kp T        &kp Y        &kp U                       &kp I                        &kp O    &kp P     &kp BACKSPACE
 &mt LCTRL GRAVE       &kp A  &kp S  &kp D                    &kp F                     &kp G        &kp H        &kp J                       &kp K                        &kp L    &kp SEMI  &mt RIGHT_CONTROL SINGLE_QUOTE
-&mt LSHFT UNDERSCORE  &kp Z  &kp X  &kp C                    &kp V                     &kp B        &kp N        &kp M                       &kp COMMA                    &kp DOT  &kp FSLH  &kt BACKSLASH
+&mt LSHFT UNDERSCORE  &kp Z  &kp X  &kp C                    &kp V                     &kp B        &kp N        &kp M                       &kp COMMA                    &kp DOT  &kp FSLH  &mt LEFT_SHIFT BACKSLASH
                                     &mt LEFT_ALT LEFT_BRACE  &mt LEFT_GUI RIGHT_BRACE  &lt 1 SPACE  &lt 2 ENTER  &mt RIGHT_GUI LEFT_BRACKET  &mt RIGHT_ALT RIGHT_BRACKET
             >;
         };
@@ -115,9 +114,9 @@
         adjust_layer {
             display-name = "Adjust";
             bindings = <
-&bootloader  &trans         &trans         &trans         &trans         &trans         &trans        &trans          &trans  &trans  &trans  &trans
-&trans       &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &out OUT_USB  &out OUT_BLE    &trans  &trans  &trans  &trans
-&trans       &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &bt BT_CLR    &bt BT_CLR_ALL  &trans  &trans  &trans  &trans
+&bootloader  &trans         &trans         &trans         &trans         &trans         &trans        &trans          &trans        &trans  &trans  &trans
+&trans       &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &out OUT_USB  &out OUT_BLE    &out OUT_TOG  &trans  &trans  &trans
+&trans       &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans  &trans  &trans
                                            &trans         &trans         &trans         &trans        &trans          &trans
             >;
         };
