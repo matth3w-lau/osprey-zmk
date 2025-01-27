@@ -93,10 +93,10 @@
         mac_layer {
             display-name = "Mac";
             bindings = <
-&kp TAB         &kp Q               &kp W             &kp E           &kp R            &kp T        &kp Y        &kp U             &kp I              &kp O              &kp P                   &kp BACKSPACE
-&kp GRAVE       &mt LEFT_CONTROL A  &mt LEFT_SHIFT S  &mt LEFT_ALT D  &mt LEFT_GUI F   &kp G        &kp H        &mt RIGHT_GUI J   &mt RIGHT_ALT K    &mt RIGHT_SHIFT L  &mt RIGHT_CONTROL SEMI  &kp SINGLE_QUOTE
-&kp UNDERSCORE  &kp Z               &kp X             &kp C           &kp V            &kp B        &kp N        &kp M             &kp COMMA          &kp DOT            &kp FSLH                &kp BACKSLASH
-                                                      &kp LEFT_BRACE  &kp RIGHT_BRACE  &lt 2 SPACE  &lt 3 ENTER  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp TAB         &kp Q               &kp W           &kp E             &kp R            &kp T        &kp Y        &kp U             &kp I              &kp O            &kp P                   &kp BACKSPACE
+&kp GRAVE       &mt LEFT_CONTROL A  &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LEFT_GUI F   &kp G        &kp H        &mt RIGHT_GUI J   &mt RIGHT_SHIFT K  &mt RIGHT_ALT L  &mt RIGHT_CONTROL SEMI  &kp SINGLE_QUOTE
+&kp UNDERSCORE  &kp Z               &kp X           &kp C             &kp V            &kp B        &kp N        &kp M             &kp COMMA          &kp DOT          &kp FSLH                &kp BACKSLASH
+                                                    &kp LEFT_BRACE    &kp RIGHT_BRACE  &lt 2 SPACE  &lt 3 ENTER  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
         };
 
@@ -123,7 +123,7 @@
             display-name = "Raise";
             bindings = <
 &trans  &kp F1   &kp F2   &kp F3         &kp F4         &kp F5         &kp F6          &kp F7             &kp F8           &kp F9           &kp F10           &trans
-&trans  &kp F11  &kp F12  &kp HOME       &kp END        &kp PAGE_UP    &kp LEFT_ARROW  &kp DOWN_ARROW     &kp UP_ARROW     &kp RIGHT_ARROW  &trans            &trans
+&trans  &kp F11  &kp F12  &kp HOME       &kp END        &kp PAGE_UP    &kp LEFT_ARROW  &kp DOWN_ARROW     &kp UP_ARROW     &kp RIGHT_ARROW  &username         &word_pwd
 &trans  &trans   &trans   &trans         &trans         &kp PAGE_DOWN  &trans          &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE       &kp C_PLAY_PAUSE  &trans
                           &kp LA(SPACE)  &kp LG(SPACE)  &trans         &trans          &trans             &trans
             >;
