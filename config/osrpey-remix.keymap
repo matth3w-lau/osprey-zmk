@@ -29,12 +29,12 @@
         };
 
         escape {
-            bindings = <&kp ESCAPE>;
+            bindings = <&kp LEFT_BRACE>;
             key-positions = <16 15>;
         };
 
         escape_alt {
-            bindings = <&kp ESCAPE>;
+            bindings = <&kp RIGHT_BRACE>;
             key-positions = <19 20>;
         };
 
@@ -102,8 +102,8 @@
         mac_layer {
             display-name = "Mac";
             bindings = <
-&kp TAB            &kp Q               &kp W           &kp E             &kp R            &kp T        &kp Y        &kp U             &kp I              &kp O            &kp P                   &kp BACKSPACE
-&kp GRAVE          &mt LEFT_CONTROL A  &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LEFT_GUI F   &kp G        &kp H        &mt RIGHT_GUI J   &mt RIGHT_SHIFT K  &mt RIGHT_ALT L  &mt RIGHT_CONTROL SEMI  &kp SINGLE_QUOTE
+&kp ESCAPE         &kp Q               &kp W           &kp E             &kp R            &kp T        &kp Y        &kp U             &kp I              &kp O            &kp P                   &kp BACKSPACE
+&kp TAB            &mt LEFT_CONTROL A  &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LEFT_GUI F   &kp G        &kp H        &mt RIGHT_GUI J   &mt RIGHT_SHIFT K  &mt RIGHT_ALT L  &mt RIGHT_CONTROL SEMI  &kp SINGLE_QUOTE
 &grave_underscore  &kp Z               &kp X           &kp C             &kp V            &kp B        &kp N        &kp M             &kp COMMA          &kp DOT          &kp FSLH                &kp BACKSLASH
                                                        &kp LEFT_BRACE    &kp RIGHT_BRACE  &lt 2 SPACE  &lt 3 ENTER  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
