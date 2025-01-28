@@ -20,19 +20,14 @@
 
         equal {
             bindings = <&kp EQUAL>;
-            key-positions = <31 32>;
-            layers = <0>;
-        };
-
-        plus {
-            bindings = <&kp PLUS>;
-            key-positions = <20 19>;
+            key-positions = <16 15>;
             layers = <2>;
         };
 
-        multiply {
-            bindings = <&kp ASTERISK>;
-            key-positions = <8 7>;
+        plus_minus {
+            bindings = <&plus_minus>;
+            key-positions = <20 19>;
+            layers = <2>;
         };
 
         input_source {
@@ -40,13 +35,8 @@
             key-positions = <39 30>;
         };
 
-        divide {
-            bindings = <&kp BACKSLASH>;
-            key-positions = <>;
-        };
-
-        minus {
-            bindings = <&kp MINUS>;
+        mul_div {
+            bindings = <&mul_div>;
             key-positions = <32 31>;
             layers = <2>;
         };
@@ -94,13 +84,27 @@
             #binding-cells = <0>;
             bindings = <&kp UNDERSCORE>, <&kp GRAVE>;
         };
+
+        plus_minus: plus_minus {
+            compatible = "zmk,behavior-tap-dance";
+            label = "PLUS_MINUS";
+            #binding-cells = <0>;
+            bindings = <&kp PLUS>, <&kp MINUS>;
+        };
+
+        mul_div: mul_div {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MUL_DIV";
+            #binding-cells = <0>;
+            bindings = <&kp ASTERISK>, <&kp BACKSLASH>;
+        };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
         mac_layer {
-            display-name = "base";
+            display-name = "mac_layer";
             bindings = <
 &kp TAB            &kp Q               &kp W           &kp E           &kp R             &kp T        &kp Y        &kp U              &kp I              &kp O            &kp P                   &kp BACKSPACE
 &grave_underscore  &mt LEFT_CONTROL A  &mt LEFT_ALT S  &mt LEFT_GUI D  &mt LEFT_SHIFT F  &kp G        &kp H        &mt RIGHT_SHIFT J  &mt RIGHT_GUI K    &mt RIGHT_ALT L  &mt RIGHT_CONTROL SEMI  &kp SINGLE_QUOTE
