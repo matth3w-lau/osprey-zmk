@@ -120,11 +120,11 @@
             label = "USERNAME";
         };
 
-        word_pwd: word_pwd {
+        work_pwd: work_pwd {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp N2 &kp N3 &kp V &kp N2 &kp AT &kp T &kp LS(U) &kp H &kp LS(S) &kp EXCL &kp LS(R) &kp LS(M) &kp LS(H) &kp AMPS>;
-            label = "WORD_PWD";
+            label = "WORK_PWD";
         };
 
         change_language: change_language {
@@ -242,7 +242,7 @@
         mod_nav_layer {
             bindings = <
 &trans  &trans            &trans     &trans         &trans         &trans     &trans          &trans          &trans         &trans           &trans     &trans
-&trans  &kp LEFT_CONTROL  &kp LALT   &kp LGUI       &kp LSHFT      &trans     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW  &username  &word_pwd
+&trans  &kp LEFT_CONTROL  &kp LALT   &kp LGUI       &kp LSHFT      &trans     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW  &username  &work_pwd
 &trans  &kp LG(Z)         &kp LG(X)  &kp LG(C)      &kp LG(V)      &kp LG(B)  &kp LA(LS(H))   &kp LS(LA(J))   &kp LA(LS(K))  &kp LA(LS(L))    &trans     &trans
                                      &kp LA(SPACE)  &kp LG(SPACE)  &trans     &trans          &trans          &trans
             >;
