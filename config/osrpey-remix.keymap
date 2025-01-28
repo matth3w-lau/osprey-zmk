@@ -169,10 +169,10 @@
 
         mac_layer {
             bindings = <
-&kp TAB            &kp Q               &kp W           &kp E            &kp R             &kp T            &kp Y            &kp U              &kp I            &kp O            &kp P                   &backspace_delete
-&underscore_grave  &mt LEFT_CONTROL A  &mt LEFT_ALT S  &mt LEFT_GUI D   &mt LEFT_SHIFT F  &kp G            &kp H            &mt RIGHT_SHIFT J  &mt RIGHT_GUI K  &mt RIGHT_ALT L  &mt RIGHT_CONTROL SEMI  &kp SINGLE_QUOTE
-&kp HOME           &kp Z               &kp X           &kp C            &kp V             &kp B            &kp N            &kp M              &kp COMMA        &kp DOT          &kp FSLH                &kp END
-                                                       &ht_layer_3 3 3  &kp SPACE         &ht_layer_2 2 2  &ht_layer_3 3 3  &kp ENTER          &ht_layer_4 4 0
+&kp TAB            &kp Q               &kp W           &kp E            &kp R             &kp T      &kp Y      &kp U              &kp I            &kp O            &kp P                   &backspace_delete
+&underscore_grave  &mt LEFT_CONTROL A  &mt LEFT_ALT S  &mt LEFT_GUI D   &mt LEFT_SHIFT F  &kp G      &kp H      &mt RIGHT_SHIFT J  &mt RIGHT_GUI K  &mt RIGHT_ALT L  &mt RIGHT_CONTROL SEMI  &kp SINGLE_QUOTE
+&kp HOME           &kp Z               &kp X           &kp C            &kp V             &kp B      &kp N      &kp M              &kp COMMA        &kp DOT          &kp FSLH                &kp END
+                                                       &ht_layer_3 3 3  &ht_layer_2 2 0   &kp SPACE  &kp ENTER  &ht_layer_3 3 0    &ht_layer_4 4 0
             >;
         };
 
