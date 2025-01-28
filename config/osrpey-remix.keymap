@@ -196,10 +196,10 @@
 
         mod_nav_layer {
             bindings = <
-&trans  &trans            &trans     &trans         &trans         &trans     &trans                  &trans                  &trans                &trans                   &trans     &trans
-&trans  &kp LEFT_CONTROL  &kp LALT   &kp LGUI       &kp LSHFT      &trans     &kp LEFT_ARROW          &kp DOWN_ARROW          &kp UP_ARROW          &kp RIGHT_ARROW          &username  &word_pwd
-&trans  &kp LG(Z)         &kp LG(X)  &kp LG(C)      &kp LG(V)      &kp LG(B)  &kp LA(LS(LEFT_ARROW))  &kp LS(LA(DOWN_ARROW))  &kp LA(LS(UP_ARROW))  &kp LA(LS(RIGHT_ARROW))  &trans     &trans
-                                     &kp LA(SPACE)  &kp LG(SPACE)  &trans     &trans                  &trans                  &trans
+&trans  &trans            &trans     &trans         &trans         &trans     &trans          &trans          &trans         &trans           &trans     &trans
+&trans  &kp LEFT_CONTROL  &kp LALT   &kp LGUI       &kp LSHFT      &trans     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW  &username  &word_pwd
+&trans  &kp LG(Z)         &kp LG(X)  &kp LG(C)      &kp LG(V)      &kp LG(B)  &kp LA(LS(H))   &kp LS(LA(J))   &kp LA(LS(K))  &kp LA(LS(L))    &trans     &trans
+                                     &kp LA(SPACE)  &kp LG(SPACE)  &trans     &trans          &trans          &trans
             >;
         };
 
