@@ -18,6 +18,23 @@
     combos {
         compatible = "zmk,combos";
 
+        input_source {
+            bindings = <&change_language>;
+            key-positions = <39 30>;
+        };
+
+        escape_left {
+            bindings = <&kp ESCAPE>;
+            key-positions = <16 15>;
+            layers = <0>;
+        };
+
+        escape_right {
+            bindings = <&kp ESCAPE>;
+            key-positions = <20 19>;
+            layers = <0>;
+        };
+
         equal {
             bindings = <&kp EQUAL>;
             key-positions = <16 15>;
@@ -30,28 +47,12 @@
             layers = <2>;
         };
 
-        input_source {
-            bindings = <&change_language>;
-            key-positions = <39 30>;
-        };
-
         mul_div {
             bindings = <&mul_div>;
             key-positions = <32 31>;
             layers = <2>;
         };
 
-        escape_right {
-            bindings = <&kp ESCAPE>;
-            key-positions = <20 19>;
-            layers = <0>;
-        };
-
-        escape_left {
-            bindings = <&kp ESCAPE>;
-            key-positions = <16 15>;
-            layers = <0>;
-        };
     };
 
     macros {
@@ -104,7 +105,6 @@
         compatible = "zmk,keymap";
 
         mac_layer {
-            display-name = "mac_layer";
             bindings = <
 &kp TAB            &kp Q               &kp W           &kp E           &kp R             &kp T        &kp Y        &kp U              &kp I              &kp O            &kp P                   &kp BACKSPACE
 &grave_underscore  &mt LEFT_CONTROL A  &mt LEFT_ALT S  &mt LEFT_GUI D  &mt LEFT_SHIFT F  &kp G        &kp H        &mt RIGHT_SHIFT J  &mt RIGHT_GUI K    &mt RIGHT_ALT L  &mt RIGHT_CONTROL SEMI  &kp SINGLE_QUOTE
@@ -123,7 +123,6 @@
         };
 
         sym_num_layer {
-            display-name = "Lower";
             bindings = <
 &trans  &trans     &trans     &trans     &trans      &trans       &trans  &kp N7        &kp N8   &kp N9  &trans  &trans
 &trans  &kp EXCL   &kp AT     &kp HASH   &kp DOLLAR  &kp PERCENT  &trans  &kp N4        &kp N5   &kp N6  &trans  &trans
@@ -133,7 +132,6 @@
         };
 
         mod_nav_layer {
-            display-name = "Raise";
             bindings = <
 &trans  &trans            &trans    &trans         &trans         &trans  &trans          &trans          &trans        &trans           &trans     &trans
 &trans  &kp LEFT_CONTROL  &kp LALT  &kp LGUI       &kp LSHFT      &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &username  &word_pwd
@@ -152,7 +150,6 @@
         };
 
         system_layer {
-            display-name = "Adjust";
             bindings = <
 &bootloader  &trans         &trans         &trans         &trans         &trans         &trans        &trans          &trans        &trans  &trans  &trans
 &trans       &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &out OUT_USB  &out OUT_BLE    &out OUT_TOG  &trans  &trans  &trans
