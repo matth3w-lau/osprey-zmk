@@ -37,8 +37,7 @@
 
         equal {
             bindings = <&kp EQUAL>;
-            key-positions = <16 15>;
-            layers = <2>;
+            key-positions = <28 27>;
         };
 
         plus_minus {
@@ -55,7 +54,7 @@
 
         home {
             bindings = <&kp HOME>;
-            key-positions = <28 27>;
+            key-positions = <4 3>;
             layers = <0>;
         };
 
@@ -73,7 +72,7 @@
 
         end {
             bindings = <&kp END>;
-            key-positions = <32 31>;
+            key-positions = <8 7>;
             layers = <0>;
         };
 
@@ -81,6 +80,18 @@
             bindings = <&kp MINUS>;
             key-positions = <20 19>;
             layers = <2>;
+        };
+
+        open_paren {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <17 16>;
+            layers = <0>;
+        };
+
+        close_paren {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <19 18>;
+            layers = <0>;
         };
     };
 
@@ -186,10 +197,10 @@
 
         mac_layer {
             bindings = <
-&kp TAB            &kp Q               &kp W           &kp E            &kp R             &kp T      &kp Y      &kp U              &kp I            &kp O            &kp P                   &backspace_delete
-&underscore_grave  &mt LEFT_CONTROL A  &mt LEFT_ALT S  &mt LEFT_GUI D   &mt LEFT_SHIFT F  &kp G      &kp H      &mt RIGHT_SHIFT J  &mt RIGHT_GUI K  &mt RIGHT_ALT L  &mt RIGHT_CONTROL SEMI  &kp SINGLE_QUOTE
-&kp HOME           &kp Z               &kp X           &kp C            &kp V             &kp B      &kp N      &kp M              &kp COMMA        &kp DOT          &kp FSLH                &kp END
-                                                       &ht_layer_3 3 3  &ht_layer_2 2 0   &kp SPACE  &kp ENTER  &ht_layer_3 3 0    &ht_layer_4 4 0
+&kp TAB         &kp Q               &kp W           &kp E             &kp R             &kp T        &kp Y        &kp U              &kp I              &kp O            &kp P                   &backspace_delete
+&kp UNDERSCORE  &mt LEFT_CONTROL A  &mt LEFT_ALT S  &mt LEFT_GUI D    &mt LEFT_SHIFT F  &kp G        &kp H        &mt RIGHT_SHIFT J  &mt RIGHT_GUI K    &mt RIGHT_ALT L  &mt RIGHT_CONTROL SEMI  &kp SINGLE_QUOTE
+&kp GRAVE       &kp Z               &kp X           &kp C             &kp V             &kp B        &kp N        &kp M              &kp COMMA          &kp DOT          &kp FSLH                &kp F7
+                                                    &kp LEFT_BRACKET  &kp LEFT_BRACE    &lt 2 SPACE  &lt 3 ENTER  &kp RIGHT_BRACE    &kp RIGHT_BRACKET
             >;
         };
 
