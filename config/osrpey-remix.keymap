@@ -53,10 +53,10 @@
             layers = <2>;
         };
 
-        equal_base {
-            bindings = <&kp EQUAL>;
+        home {
+            bindings = <&kp HOME>;
             key-positions = <28 27>;
-            layers = <0>;
+            layers = <0 2>;
         };
 
         less_than {
@@ -69,6 +69,12 @@
             bindings = <&kp GREATER_THAN>;
             key-positions = <19 18>;
             layers = <2>;
+        };
+
+        end {
+            bindings = <&kp END>;
+            key-positions = <32 31>;
+            layers = <0 2>;
         };
     };
 
