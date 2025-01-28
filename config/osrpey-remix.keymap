@@ -18,7 +18,12 @@
     combos {
         compatible = "zmk,combos";
 
-        input_source {
+        left_input_source {
+            bindings = <&change_language>;
+            key-positions = <16 38>;
+        };
+
+        right_input_source {
             bindings = <&change_language>;
             key-positions = <39 19>;
         };
