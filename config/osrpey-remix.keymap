@@ -58,6 +58,18 @@
             key-positions = <28 27>;
             layers = <0>;
         };
+
+        less_than {
+            bindings = <&kp LESS_THAN>;
+            key-positions = <17 16>;
+            layers = <2>;
+        };
+
+        greater_than {
+            bindings = <&kp GREATER_THAN>;
+            key-positions = <19 18>;
+            layers = <2>;
+        };
     };
 
     macros {
@@ -187,10 +199,10 @@
 
         sym_num_layer {
             bindings = <
-&trans  &trans         &trans  &kp CARET  &trans       &kp LEFT_BRACKET      &kp RBKT               &kp N7        &kp N8   &kp N9  &trans  &trans
-&trans  &kp EXCL       &kp AT  &kp HASH   &kp PERCENT  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp N4        &kp N5   &kp N6  &trans  &trans
-&trans  &kp AMPERSAND  &trans  &kp PIPE   &kp DOLLAR   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp N1        &kp N2   &kp N3  &trans  &trans
-                               &trans     &trans       &trans                &trans                 &kp NUMBER_0  &kp DOT
+&trans  &none          &none   &kp CARET  &none        &kp LEFT_BRACKET      &kp RBKT               &kp N7   &kp N8  &kp N9  &none      &trans
+&trans  &kp EXCL       &kp AT  &kp HASH   &kp PERCENT  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp N4   &kp N5  &kp N6  &kp COMMA  &none
+&trans  &kp AMPERSAND  &trans  &kp PIPE   &kp DOLLAR   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp N1   &kp N2  &kp N3  &none      &none
+                               &trans     &trans       &trans                &kp NUMBER_0           &kp DOT  &none
             >;
         };
 
