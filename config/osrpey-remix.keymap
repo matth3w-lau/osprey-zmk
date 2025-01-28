@@ -178,10 +178,10 @@
 
         sym_num_layer {
             bindings = <
-&trans  &trans    &trans         &kp CARET  &trans      &trans       &trans  &kp N7        &kp N8   &kp N9  &trans  &trans
-&trans  &kp EXCL  &kp AT         &kp HASH   &kp DOLLAR  &kp PERCENT  &trans  &kp N4        &kp N5   &kp N6  &trans  &trans
-&trans  &trans    &kp AMPERSAND  &kp PIPE   &kp EXCL    &trans       &trans  &kp N1        &kp N2   &kp N3  &trans  &trans
-                                 &trans     &trans      &trans       &trans  &kp NUMBER_0  &kp DOT
+&trans  &trans         &trans  &kp CARET  &trans       &kp LEFT_BRACKET      &kp RBKT               &kp N7        &kp N8   &kp N9  &trans  &trans
+&trans  &kp EXCL       &kp AT  &kp HASH   &kp PERCENT  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp N4        &kp N5   &kp N6  &trans  &trans
+&trans  &kp AMPERSAND  &trans  &kp PIPE   &kp DOLLAR   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp N1        &kp N2   &kp N3  &trans  &trans
+                               &trans     &trans       &trans                &trans                 &kp NUMBER_0  &kp DOT
             >;
         };
 
