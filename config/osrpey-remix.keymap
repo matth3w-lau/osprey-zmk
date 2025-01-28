@@ -84,9 +84,9 @@
     };
 
     behaviors {
-        grave_underscore: grave_underscore {
+        underscore_grave: underscore_grave {
             compatible = "zmk,behavior-tap-dance";
-            label = "GRAVE_UNDERSCORE";
+            label = "UNDERSCORE_GRAVE";
             #binding-cells = <0>;
             bindings = <&kp UNDERSCORE>, <&kp GRAVE>;
         };
@@ -105,14 +105,53 @@
             bindings = <&kp ASTERISK>, <&kp BACKSLASH>;
         };
 
-        hold_tap_layer: hold_tap_layer {
+        ht_layer_2: ht_layer_2 {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP_LAYER";
-            bindings = <&mo>, <&tog>;
+            label = "HT_LAYER_2";
+            bindings = <&mo>, <&td_layer_2>;
 
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
+        };
+
+        td_layer_2: td_layer_2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_LAYER_2";
+            #binding-cells = <0>;
+            bindings = <&sl 2>, <&tog 2>;
+        };
+
+        td_layer_3: td_layer_3 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_LAYER_3";
+            #binding-cells = <0>;
+            bindings = <&sl 3>, <&tog 3>;
+        };
+
+        ht_layer_3: ht_layer_3 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_LAYER_3";
+            bindings = <&mo>, <&td_layer_3>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        ht_layer_4: ht_layer_4 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_LAYER_4";
+            bindings = <&mo>, <&td_layer_4>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        td_layer_4: td_layer_4 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_LAYER_4";
+            #binding-cells = <0>;
+            bindings = <&sl 4>, <&tog 4>;
         };
     };
 
@@ -121,10 +160,10 @@
 
         mac_layer {
             bindings = <
-&kp TAB            &kp Q               &kp W           &kp E           &kp R             &kp T                &kp Y                &kp U              &kp I                &kp O            &kp P                   &kp BACKSPACE
-&grave_underscore  &mt LEFT_CONTROL A  &mt LEFT_ALT S  &mt LEFT_GUI D  &mt LEFT_SHIFT F  &kp G                &kp H                &mt RIGHT_SHIFT J  &mt RIGHT_GUI K      &mt RIGHT_ALT L  &mt RIGHT_CONTROL SEMI  &kp SINGLE_QUOTE
-&kp HOME           &kp Z               &kp X           &kp C           &kp V             &kp B                &kp N                &kp M              &kp COMMA            &kp DOT          &kp FSLH                &kp END
-                                                       &kp LEFT_BRACE  &kp SPACE         &hold_tap_layer 2 2  &hold_tap_layer 3 3  &kp ENTER          &hold_tap_layer 4 4
+&kp TAB            &kp Q               &kp W           &kp E            &kp R             &kp T            &kp Y            &kp U              &kp I            &kp O            &kp P                   &kp BACKSPACE
+&underscore_grave  &mt LEFT_CONTROL A  &mt LEFT_ALT S  &mt LEFT_GUI D   &mt LEFT_SHIFT F  &kp G            &kp H            &mt RIGHT_SHIFT J  &mt RIGHT_GUI K  &mt RIGHT_ALT L  &mt RIGHT_CONTROL SEMI  &kp SINGLE_QUOTE
+&kp HOME           &kp Z               &kp X           &kp C            &kp V             &kp B            &kp N            &kp M              &kp COMMA        &kp DOT          &kp FSLH                &kp END
+                                                       &ht_layer_3 3 3  &kp SPACE         &ht_layer_2 2 2  &ht_layer_3 3 3  &kp ENTER          &ht_layer_4 4 0
             >;
         };
 
@@ -148,10 +187,10 @@
 
         mod_nav_layer {
             bindings = <
-&trans  &trans            &trans     &trans         &trans         &trans     &trans          &trans          &trans        &trans           &trans     &trans
-&trans  &kp LEFT_CONTROL  &kp LALT   &kp LGUI       &kp LSHFT      &trans     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &username  &word_pwd
-&trans  &kp LG(Z)         &kp LG(X)  &kp LG(C)      &kp LG(V)      &kp LG(B)  &trans          &trans          &trans        &trans           &trans     &trans
-                                     &kp LA(SPACE)  &kp LG(SPACE)  &trans     &trans          &trans          &trans
+&trans  &trans            &trans     &trans         &trans         &trans     &trans                  &trans                  &trans                &trans                   &trans     &trans
+&trans  &kp LEFT_CONTROL  &kp LALT   &kp LGUI       &kp LSHFT      &trans     &kp LEFT_ARROW          &kp DOWN_ARROW          &kp UP_ARROW          &kp RIGHT_ARROW          &username  &word_pwd
+&trans  &kp LG(Z)         &kp LG(X)  &kp LG(C)      &kp LG(V)      &kp LG(B)  &kp LA(LS(LEFT_ARROW))  &kp LS(LA(DOWN_ARROW))  &kp LA(LS(UP_ARROW))  &kp LA(LS(RIGHT_ARROW))  &trans     &trans
+                                     &kp LA(SPACE)  &kp LG(SPACE)  &trans     &trans                  &trans                  &trans
             >;
         };
 
