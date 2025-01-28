@@ -119,14 +119,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_LAYER_2";
             #binding-cells = <0>;
-            bindings = <&sl 2>, <&tog 2>;
+            bindings = <&mo 2>, <&tog 2>;
         };
 
         td_layer_3: td_layer_3 {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_LAYER_3";
             #binding-cells = <0>;
-            bindings = <&sl 3>, <&tog 3>;
+            bindings = <&mo 3>, <&tog 3>;
         };
 
         ht_layer_3: ht_layer_3 {
@@ -151,7 +151,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_LAYER_4";
             #binding-cells = <0>;
-            bindings = <&sl 4>, <&tog 4>;
+            bindings = <&mo 4>, <&tog 4>;
         };
 
         backspace_delete: backspace_delete {
