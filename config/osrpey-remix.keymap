@@ -20,7 +20,7 @@
 
         input_source {
             bindings = <&change_language>;
-            key-positions = <39 30>;
+            key-positions = <39 19>;
         };
 
         escape_left {
@@ -99,7 +99,6 @@
             key-positions = <8 7>;
             layers = <0>;
         };
-
     };
 
     macros {
