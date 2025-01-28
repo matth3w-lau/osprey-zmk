@@ -61,24 +61,24 @@
         less_than {
             bindings = <&kp LESS_THAN>;
             key-positions = <17 16>;
-            layers = <2>;
+            layers = <0 2>;
         };
 
         greater_than {
             bindings = <&kp GREATER_THAN>;
             key-positions = <19 18>;
-            layers = <2>;
+            layers = <0 2>;
         };
 
         open_paren {
             bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <17 16>;
+            key-positions = <37 40>;
             layers = <0>;
         };
 
         close_paren {
             bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <19 18>;
+            key-positions = <36 41>;
             layers = <0>;
         };
 
@@ -93,7 +93,6 @@
             key-positions = <8 7>;
             layers = <0>;
         };
-
     };
 
     macros {
