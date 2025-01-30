@@ -71,7 +71,7 @@
 
         minus {
             bindings = <&kp MINUS>;
-            key-positions = <20 19 21>;
+            key-positions = <20 21>;
             layers = <2>;
         };
 
@@ -83,7 +83,7 @@
 
         divide {
             bindings = <&kp SLASH>;
-            key-positions = <31 32 33>;
+            key-positions = <32 33>;
         };
 
         less_than {
