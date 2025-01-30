@@ -8,6 +8,11 @@
     require-prior-idle-ms = <150>;
 };
 
+&mt {
+    hold-trigger-key-positions = <13 37 36 22 12 24 35>;
+    flavor = "balanced";
+};
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -130,16 +135,6 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
-
-        balanced_mt: balanced_mt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "BALANCED_MT";
-            bindings = <&mt>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <5000>;
-        };
     };
 
     keymap {
@@ -147,10 +142,10 @@
 
         mac_layer {
             bindings = <
-&kp TAB                         &kp Q                        &kp W  &kp E                      &kp R                    &kp T        &kp Y        &kp U            &kp I              &kp O    &kp P                            &backspace_delete
-&mt LA(LEFT_CONTROL) LC(GRAVE)  &balanced_mt LEFT_CONTROL A  &kp S  &kp D                      &kp F                    &kp G        &kp H        &kp J            &kp K              &kp L    &balanced_mt RIGHT_CONTROL SEMI  &kp SINGLE_QUOTE
-&mt LEFT_SHIFT UNDERSCORE       &kp Z                        &kp X  &kp C                      &kp V                    &kp B        &kp N        &kp M            &kp COMMA          &kp DOT  &kp FSLH                         &mt RIGHT_SHIFT BACKSLASH
-                                                                    &mt LEFT_ALT LEFT_BRACKET  &mt LEFT_GUI LEFT_BRACE  &lt 2 SPACE  &lt 3 ENTER  &kp RIGHT_BRACE  &kp RIGHT_BRACKET
+&kp TAB                         &kp Q               &kp W  &kp E                      &kp R                    &kp T        &kp Y        &kp U            &kp I              &kp O    &kp P                        &backspace_delete
+&mt LA(LEFT_CONTROL) LC(GRAVE)  &mt LEFT_CONTROL A  &kp S  &kp D                      &kp F                    &kp G        &kp H        &kp J            &kp K              &kp L    &mt RIGHT_CONTROL SEMICOLON  &kp SINGLE_QUOTE
+&mt LEFT_SHIFT UNDERSCORE       &kp Z               &kp X  &kp C                      &kp V                    &kp B        &kp N        &kp M            &kp COMMA          &kp DOT  &kp FSLH                     &mt RIGHT_SHIFT BACKSLASH
+                                                           &mt LEFT_ALT LEFT_BRACKET  &mt LEFT_GUI LEFT_BRACE  &lt 2 SPACE  &lt 3 ENTER  &kp RIGHT_BRACE  &kp RIGHT_BRACKET
             >;
         };
 
