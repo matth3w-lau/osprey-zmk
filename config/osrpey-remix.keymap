@@ -81,6 +81,11 @@
             layers = <2>;
         };
 
+        divide {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <31 32 33>;
+        };
+
         less_than {
             bindings = <&kp LESS_THAN>;
             key-positions = <29 28>;
@@ -109,11 +114,6 @@
             bindings = <&kp AMPERSAND>;
             key-positions = <16 15>;
             layers = <2>;
-        };
-
-        divide {
-            bindings = <&kp BACKSLASH>;
-            key-positions = <31 32 33>;
         };
     };
 
