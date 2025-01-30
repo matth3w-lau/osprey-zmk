@@ -101,13 +101,13 @@
         open_paren {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <17 16>;
-            layers = <0>;
+            layers = <0 2>;
         };
 
         close_paren {
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <19 18>;
-            layers = <0>;
+            layers = <0 2>;
         };
 
         and {
