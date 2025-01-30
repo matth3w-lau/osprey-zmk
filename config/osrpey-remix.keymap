@@ -9,11 +9,6 @@
     require-prior-idle-ms = <150>;
 };
 
-&mt {
-    flavor = "balanced";
-    tapping-term-ms = <50000>;
-};
-
 / {
     combos {
         compatible = "zmk,combos";
@@ -143,10 +138,10 @@
 
         mac_layer {
             bindings = <
-&kp TAB                    &kp Q               &kp W  &kp E                      &kp R                    &kp T        &kp Y        &kp U            &kp I              &kp O    &kp P                   &backspace_delete
-&kp GRAVE                  &mt LEFT_CONTROL A  &kp S  &kp D                      &kp F                    &kp G        &kp H        &kp J            &kp K              &kp L    &mt RIGHT_CONTROL SEMI  &kp SINGLE_QUOTE
-&mt LEFT_SHIFT UNDERSCORE  &kp Z               &kp X  &kp C                      &kp V                    &kp B        &kp N        &kp M            &kp COMMA          &kp DOT  &kp FSLH                &mt RIGHT_SHIFT BACKSLASH
-                                                      &mt LEFT_ALT LEFT_BRACKET  &mt LEFT_GUI LEFT_BRACE  &lt 2 SPACE  &lt 3 ENTER  &kp RIGHT_BRACE  &kp RIGHT_BRACKET
+&kp TAB                         &kp Q               &kp W  &kp E                      &kp R                    &kp T        &kp Y        &kp U            &kp I              &kp O    &kp P                   &backspace_delete
+&mt LA(LEFT_CONTROL) LC(GRAVE)  &mt LEFT_CONTROL A  &kp S  &kp D                      &kp F                    &kp G        &kp H        &kp J            &kp K              &kp L    &mt RIGHT_CONTROL SEMI  &kp SINGLE_QUOTE
+&mt LEFT_SHIFT UNDERSCORE       &kp Z               &kp X  &kp C                      &kp V                    &kp B        &kp N        &kp M            &kp COMMA          &kp DOT  &kp FSLH                &mt RIGHT_SHIFT BACKSLASH
+                                                           &mt LEFT_ALT LEFT_BRACKET  &mt LEFT_GUI LEFT_BRACE  &lt 2 SPACE  &lt 3 ENTER  &kp RIGHT_BRACE  &kp RIGHT_BRACKET
             >;
         };
 
