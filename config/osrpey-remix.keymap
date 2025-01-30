@@ -20,24 +20,22 @@
 
         left_input_source {
             bindings = <&change_language>;
-            key-positions = <16 38>;
+            key-positions = <38 17>;
         };
 
         right_input_source {
             bindings = <&change_language>;
-            key-positions = <39 19>;
+            key-positions = <39 18>;
         };
 
         home {
             bindings = <&kp HOME>;
-            key-positions = <16 15 14>;
-            layers = <0>;
+            key-positions = <16 38>;
         };
 
         end {
             bindings = <&kp END>;
-            key-positions = <20 19 21>;
-            layers = <0>;
+            key-positions = <19 39>;
         };
 
         escape_left {
@@ -55,35 +53,11 @@
         equal_base {
             bindings = <&kp EQUAL>;
             key-positions = <32 31>;
-            layers = <0>;
         };
 
-        equal {
-            bindings = <&kp EQUAL>;
+        plus_minus {
+            bindings = <&plus_minus>;
             key-positions = <28 27>;
-        };
-
-        plus {
-            bindings = <&kp PLUS>;
-            key-positions = <20 19>;
-            layers = <2>;
-        };
-
-        minus {
-            bindings = <&kp MINUS>;
-            key-positions = <20 21>;
-            layers = <2>;
-        };
-
-        multiply {
-            bindings = <&kp ASTERISK>;
-            key-positions = <32 31>;
-            layers = <2>;
-        };
-
-        divide {
-            bindings = <&kp SLASH>;
-            key-positions = <32 33>;
         };
 
         less_than {
@@ -110,9 +84,15 @@
             layers = <0 2>;
         };
 
-        and {
+        and_left {
             bindings = <&kp AMPERSAND>;
             key-positions = <16 15>;
+            layers = <2>;
+        };
+
+        and_right {
+            bindings = <&kp AMPERSAND>;
+            key-positions = <20 19>;
             layers = <2>;
         };
     };
@@ -141,67 +121,11 @@
     };
 
     behaviors {
-        underscore_grave: underscore_grave {
+        plus_minus: plus_minus {
             compatible = "zmk,behavior-tap-dance";
-            label = "UNDERSCORE_GRAVE";
+            label = "PLUS_MINUS";
             #binding-cells = <0>;
-            bindings = <&kp UNDERSCORE>, <&kp GRAVE>;
-        };
-
-        mul_div: mul_div {
-            compatible = "zmk,behavior-tap-dance";
-            label = "MUL_DIV";
-            #binding-cells = <0>;
-            bindings = <&kp ASTERISK>, <&kp BACKSLASH>;
-        };
-
-        ht_layer_2: ht_layer_2 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HT_LAYER_2";
-            bindings = <&mo>, <&td_layer_2>;
-
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-        };
-
-        td_layer_2: td_layer_2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_LAYER_2";
-            #binding-cells = <0>;
-            bindings = <&mo 2>, <&tog 2>;
-        };
-
-        td_layer_3: td_layer_3 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_LAYER_3";
-            #binding-cells = <0>;
-            bindings = <&mo 3>, <&tog 3>;
-        };
-
-        ht_layer_3: ht_layer_3 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HT_LAYER_3";
-            bindings = <&mo>, <&td_layer_3>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
-        ht_layer_4: ht_layer_4 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HT_LAYER_4";
-            bindings = <&mo>, <&td_layer_4>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
-        td_layer_4: td_layer_4 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_LAYER_4";
-            #binding-cells = <0>;
-            bindings = <&mo 4>, <&tog 4>;
+            bindings = <&kp PLUS>, <&kp MINUS>;
         };
 
         backspace_delete: backspace_delete {
@@ -219,10 +143,10 @@
 
         mac_layer {
             bindings = <
-&kp TAB         &kp Q               &kp W           &kp E             &kp R             &kp T        &kp Y        &kp U              &kp I              &kp O            &kp P                   &backspace_delete
-&kp GRAVE       &mt LEFT_CONTROL A  &mt LEFT_ALT S  &mt LEFT_GUI D    &mt LEFT_SHIFT F  &kp G        &kp H        &mt RIGHT_SHIFT J  &mt RIGHT_GUI K    &mt RIGHT_ALT L  &mt RIGHT_CONTROL SEMI  &kp SINGLE_QUOTE
-&kp UNDERSCORE  &kp Z               &kp X           &kp C             &kp V             &kp B        &kp N        &kp M              &kp COMMA          &kp DOT          &kp FSLH                &kp F7
-                                                    &kp LEFT_BRACKET  &kp LEFT_BRACE    &lt 2 SPACE  &lt 3 ENTER  &kp RIGHT_BRACE    &kp RIGHT_BRACKET
+&kp TAB                    &kp Q               &kp W  &kp E                      &kp R                    &kp T        &kp Y        &kp U            &kp I              &kp O    &kp P                   &backspace_delete
+&kp GRAVE                  &mt LEFT_CONTROL A  &kp S  &kp D                      &kp F                    &kp G        &kp H        &kp J            &kp K              &kp L    &mt RIGHT_CONTROL SEMI  &kp SINGLE_QUOTE
+&mt LEFT_SHIFT UNDERSCORE  &kp Z               &kp X  &kp C                      &kp V                    &kp B        &kp N        &kp M            &kp COMMA          &kp DOT  &kp FSLH                &mt RIGHT_SHIFT BACKSLASH
+                                                      &mt LEFT_ALT LEFT_BRACKET  &mt LEFT_GUI LEFT_BRACE  &lt 2 SPACE  &lt 3 ENTER  &kp RIGHT_BRACE  &kp RIGHT_BRACKET
             >;
         };
 
@@ -237,19 +161,19 @@
 
         sym_num_layer {
             bindings = <
-&trans  &none      &none      &kp CARET  &kp DOLLAR   &kp BACKSLASH  &none  &kp N7        &kp N8   &kp N9  &none      &trans
-&trans  &kp EXCL   &kp AT     &kp HASH   &kp PERCENT  &kp PIPE       &none  &kp N4        &kp N5   &kp N6  &kp COMMA  &none
-&trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)    &kp LG(B)      &none  &kp N1        &kp N2   &kp N3  &none      &none
-                              &trans     &trans       &trans         &mo 3  &kp NUMBER_0  &kp DOT
+&trans  &none     &none   &kp CARET     &kp DOLLAR   &trans    &none  &kp N7        &kp N8   &kp N9  &none      &trans
+&trans  &kp EXCL  &kp AT  &kp HASH      &kp PERCENT  &kp PIPE  &none  &kp N4        &kp N5   &kp N6  &kp COMMA  &none
+&trans  &trans    &trans  &kp ASTERISK  &trans       &trans    &none  &kp N1        &kp N2   &kp N3  &none      &none
+                          &trans        &trans       &trans    &mo 3  &kp NUMBER_0  &kp DOT
             >;
         };
 
         mod_nav_layer {
             bindings = <
-&trans  &trans            &trans     &trans         &trans         &trans     &trans          &trans          &trans         &trans           &trans     &trans
-&trans  &kp LEFT_CONTROL  &kp LALT   &kp LGUI       &kp LSHFT      &trans     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW  &username  &work_pwd
-&trans  &kp LG(Z)         &kp LG(X)  &kp LG(C)      &kp LG(V)      &kp LG(B)  &kp LA(LS(H))   &kp LS(LA(J))   &kp LA(LS(K))  &kp LA(LS(L))    &trans     &trans
-                                     &kp LA(SPACE)  &kp LG(SPACE)  &trans     &trans          &trans          &trans
+&trans  &trans  &trans  &trans         &trans         &trans  &trans          &kp F7          &kp F11        &kp F12          &trans     &trans
+&trans  &trans  &trans  &trans         &trans         &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW  &username  &work_pwd
+&trans  &trans  &trans  &trans         &trans         &trans  &kp LA(LS(H))   &kp LS(LA(J))   &kp LA(LS(K))  &kp LA(LS(L))    &trans     &trans
+                        &kp LA(SPACE)  &kp LG(SPACE)  &trans  &trans          &trans          &trans
             >;
         };
 
