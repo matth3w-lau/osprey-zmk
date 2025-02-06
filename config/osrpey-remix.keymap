@@ -24,12 +24,12 @@
 
         home {
             bindings = <&kp HOME>;
-            key-positions = <16 17>;
+            key-positions = <18 19>;
         };
 
         end {
             bindings = <&kp END>;
-            key-positions = <19 18>;
+            key-positions = <17 16>;
         };
 
         escape_left {
