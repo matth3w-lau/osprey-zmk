@@ -104,7 +104,7 @@
         work_pwd: work_pwd {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp N2 &kp N3 &kp V &kp N2 &kp AT &kp T &kp LS(U) &kp H &kp LS(S) &kp EXCL &kp LS(R) &kp LS(M) &kp LS(H) &kp AMPS>;
+            bindings = <&kp AT &kp N0 &kp LS(Z) &kp N2 &kp N9 &kp LS(F) &kp LS(F) &kp LS(K) &kp LS(U) &kp R &kp N9 &kp LS(M) &kp G &kp R>;
             label = "WORK_PWD";
         };
 
