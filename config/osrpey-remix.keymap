@@ -21,12 +21,12 @@
 
         home {
             bindings = <&kp HOME>;
-            key-positions = <18 19>;
+            key-positions = <19 21 20>;
         };
 
         end {
             bindings = <&kp END>;
-            key-positions = <17 16>;
+            key-positions = <16 14 15>;
         };
 
         escape_left {
@@ -53,43 +53,31 @@
 
         less_than {
             bindings = <&kp LESS_THAN>;
-            key-positions = <16 15 14>;
+            key-positions = <16 38>;
             layers = <0 2>;
         };
 
         greater_than {
             bindings = <&kp GREATER_THAN>;
-            key-positions = <19 21 20>;
+            key-positions = <19 39>;
             layers = <0 2>;
         };
 
         open_paren {
             bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <16 38>;
+            key-positions = <40 37>;
             layers = <0 2>;
         };
 
         close_paren {
             bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <19 39>;
+            key-positions = <19 41 36>;
             layers = <0 2>;
-        };
-
-        and_left {
-            bindings = <&kp AMPERSAND>;
-            key-positions = <16 15>;
-            layers = <2>;
-        };
-
-        and_right {
-            bindings = <&kp AMPERSAND>;
-            key-positions = <20 19>;
-            layers = <2>;
         };
 
         plus {
             bindings = <&kp PLUS>;
-            key-positions = <29 28>;
+            key-positions = <17 16>;
         };
     };
 
@@ -157,10 +145,10 @@
 
         sym_num_layer {
             bindings = <
-&trans  &none     &none   &kp CARET     &kp DOLLAR   &trans    &none   &kp N7        &kp N8        &kp N9  &none      &trans
-&trans  &kp EXCL  &kp AT  &kp HASH      &kp PERCENT  &kp PIPE  &none   &kp N4        &kp N5        &kp N6  &kp DOT    &none
-&trans  &trans    &trans  &kp ASTERISK  &trans       &trans    &none   &kp N1        &kp N2        &kp N3  &kp COMMA  &none
-                          &trans        &trans       &trans    &trans  &kp NUMBER_0  &kp NUMBER_0
+&trans  &none     &none   &kp CARET     &kp DOLLAR     &trans    &none   &kp N7        &kp N8        &kp N9  &none      &trans
+&trans  &kp EXCL  &kp AT  &kp HASH      &kp PERCENT    &kp PIPE  &none   &kp N4        &kp N5        &kp N6  &kp DOT    &none
+&trans  &trans    &trans  &kp ASTERISK  &kp AMPERSAND  &trans    &none   &kp N1        &kp N2        &kp N3  &kp COMMA  &none
+                          &trans        &trans         &trans    &trans  &kp NUMBER_0  &kp NUMBER_0
             >;
         };
 
