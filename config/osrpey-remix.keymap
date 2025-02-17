@@ -71,7 +71,7 @@
 
         close_paren {
             bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <19 41 36>;
+            key-positions = <41 36>;
             layers = <0 2>;
         };
 
