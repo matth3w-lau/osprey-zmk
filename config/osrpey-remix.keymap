@@ -51,18 +51,6 @@
             key-positions = <28 27>;
         };
 
-        less_than {
-            bindings = <&kp LESS_THAN>;
-            key-positions = <16 38>;
-            layers = <0 2>;
-        };
-
-        greater_than {
-            bindings = <&kp GREATER_THAN>;
-            key-positions = <19 39>;
-            layers = <0 2>;
-        };
-
         open_paren {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <17 16>;
