@@ -127,10 +127,10 @@
 
         mac_layer {
             bindings = <
-&kp TAB                    &kp Q  &kp W  &kp E                      &kp R                    &kp T        &kp Y        &kp U                              &kp I                         &kp O    &kp P          &backspace_delete
-&mt LEFT_CONTROL GRAVE     &kp A  &kp S  &kp D                      &kp F                    &kp G        &kp H        &kp J                              &kp K                         &kp L    &kp SEMICOLON  &mt RIGHT_CONTROL SINGLE_QUOTE
-&mt LEFT_SHIFT UNDERSCORE  &kp Z  &kp X  &kp C                      &kp V                    &kp B        &kp N        &kp M                              &kp COMMA                     &kp DOT  &kp FSLH       &mt RIGHT_SHIFT BACKSLASH
-                                         &mt LEFT_ALT LEFT_BRACKET  &mt LEFT_GUI LEFT_BRACE  &lt 2 SPACE  &lt 3 ENTER  &mt LA(RIGHT_CONTROL) RIGHT_BRACE  &mt LEFT_SHIFT RIGHT_BRACKET
+&kp TAB                    &kp Q  &kp W  &kp E                    &kp R                     &kp T        &kp Y        &kp U                           &kp I                         &kp O    &kp P          &backspace_delete
+&mt LEFT_CONTROL GRAVE     &kp A  &kp S  &kp D                    &kp F                     &kp G        &kp H        &kp J                           &kp K                         &kp L    &kp SEMICOLON  &mt LA(RIGHT_CONTROL) SINGLE_QUOTE
+&mt LEFT_SHIFT UNDERSCORE  &kp Z  &kp X  &kp C                    &kp V                     &kp B        &kp N        &kp M                           &kp COMMA                     &kp DOT  &kp FSLH       &mt RIGHT_SHIFT BACKSLASH
+                                         &mt LEFT_ALT LEFT_BRACE  &mt LEFT_GUI RIGHT_BRACE  &lt 2 SPACE  &lt 3 ENTER  &mt RIGHT_CONTROL LEFT_BRACKET  &mt LEFT_SHIFT RIGHT_BRACKET
             >;
         };
 
