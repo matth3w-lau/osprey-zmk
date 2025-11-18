@@ -10,35 +10,23 @@
         compatible = "zmk,combos";
 
         left_input_source {
-            bindings = <&change_language>;
+            bindings = <&kp CAPSLOCK>;
             key-positions = <38 17>;
         };
 
         right_input_source {
-            bindings = <&change_language>;
+            bindings = <&kp CAPSLOCK>;
             key-positions = <39 18>;
-        };
-
-        home {
-            bindings = <&kp HOME>;
-            key-positions = <16 15 14>;
-        };
-
-        end {
-            bindings = <&kp END>;
-            key-positions = <19 20 21>;
         };
 
         escape_left {
             bindings = <&kp ESCAPE>;
             key-positions = <16 15>;
-            layers = <0>;
         };
 
         escape_right {
             bindings = <&kp ESCAPE>;
             key-positions = <20 19>;
-            layers = <0>;
         };
 
         equal_base {
@@ -53,14 +41,12 @@
 
         open_paren {
             bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <17 16>;
-            layers = <0 2>;
+            key-positions = <16 15 14>;
         };
 
         close_paren {
             bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <19 18>;
-            layers = <0 2>;
+            key-positions = <19 20 21>;
         };
 
         plus {
@@ -70,25 +56,18 @@
     };
 
     macros {
-        username: username {
+        hey: hey {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp N2 &kp N1 &kp N5 &kp N9 &kp N7 &kp N0>;
-            label = "USERNAME";
+            bindings = <&kp LS(G) &kp T &kp N0 &kp E &kp T &kp T &kp LS(F) &kp LS(J) &kp LS(V) &kp W &kp LS(G) &kp V &kp LS(D) &kp R &kp N2 &kp LS(V)>;
+            label = "HEY";
         };
 
-        work_pwd: work_pwd {
+        idea_find_file: idea_find_file {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp AT &kp N0 &kp LS(Z) &kp N2 &kp N9 &kp LS(F) &kp LS(F) &kp LS(K) &kp LS(U) &kp R &kp N9 &kp LS(M) &kp G &kp R>;
-            label = "WORK_PWD";
-        };
-
-        change_language: change_language {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(SPACE)>;
-            label = "CHANGE_LANGUAGE";
+            bindings = <&kp LEFT_SHIFT &kp LEFT_SHIFT &kp LEFT_SHIFT>;
+            label = "IDEA_FIND_FILE";
         };
     };
 
@@ -115,46 +94,46 @@
 
         mac_layer {
             bindings = <
-&kp TAB                    &kp Q  &kp W  &kp E                    &kp R                     &kp T        &kp Y        &kp U                           &kp I                         &kp O    &kp P          &backspace_delete
-&mt LEFT_CONTROL GRAVE     &kp A  &kp S  &kp D                    &kp F                     &kp G        &kp H        &kp J                           &kp K                         &kp L    &kp SEMICOLON  &mt LA(RIGHT_CONTROL) SINGLE_QUOTE
-&mt LEFT_SHIFT UNDERSCORE  &kp Z  &kp X  &kp C                    &kp V                     &kp B        &kp N        &kp M                           &kp COMMA                     &kp DOT  &kp FSLH       &mt RIGHT_SHIFT BACKSLASH
-                                         &mt LEFT_ALT LEFT_BRACE  &mt LEFT_GUI RIGHT_BRACE  &lt 2 SPACE  &lt 3 ENTER  &mt RIGHT_CONTROL LEFT_BRACKET  &mt LEFT_SHIFT RIGHT_BRACKET
+&kp TAB                    &kp Q  &kp W  &kp E                       &kp R                      &kp T        &kp Y        &kp U                       &kp I                          &kp O    &kp P          &backspace_delete
+&mt LEFT_CONTROL GRAVE     &kp A  &kp S  &kp D                       &kp F                      &kp G        &kp H        &kp J                       &kp K                          &kp L    &kp SEMICOLON  &kp SINGLE_QUOTE
+&mt LEFT_SHIFT UNDERSCORE  &kp Z  &kp X  &kp C                       &kp V                      &kp B        &kp N        &kp M                       &kp COMMA                      &kp DOT  &kp FSLH       &mt RIGHT_SHIFT BACKSLASH
+                                         &mt LEFT_ALT RIGHT_BRACKET  &mt LEFT_GUI LEFT_BRACKET  &lt 2 SPACE  &lt 3 ENTER  &mt RIGHT_SHIFT LEFT_BRACE  &mt RIGHT_CONTROL RIGHT_BRACE
             >;
         };
 
         window_layer {
             bindings = <
-&trans            &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans    &trans
-&kp LEFT_CONTROL  &kp A   &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &kp SEMI  &trans
-&kp LEFT_SHIFT    &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans    &trans
-                                  &trans  &trans  &kp SPACE  &trans  &trans  &trans
+&trans  &trans  &trans  &trans                      &trans                     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans                      &trans                     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans                      &trans                     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &mt LEFT_GUI RIGHT_BRACKET  &mt LEFT_ALT LEFT_BRACKET  &trans  &trans  &trans  &trans
             >;
         };
 
         sym_num_layer {
             bindings = <
-&trans  &none     &none   &kp CARET     &kp DOLLAR     &trans    &none         &kp N7        &kp N8        &kp N9  &none      &trans
-&trans  &kp EXCL  &kp AT  &kp HASH      &kp PERCENT    &kp PIPE  &kp ASTERISK  &kp N4        &kp N5        &kp N6  &kp DOT    &none
-&trans  &trans    &trans  &kp ASTERISK  &kp AMPERSAND  &trans    &kp SLASH     &kp N1        &kp N2        &kp N3  &kp COMMA  &none
-                          &trans        &trans         &trans    &trans        &kp NUMBER_0  &kp NUMBER_0
+&trans  &none               &none            &kp PIPE      &none          &none       &none      &kp N7        &kp N8      &kp N9  &none      &trans
+&trans  &kp EXCL            &kp AT           &kp HASH      &kp PERCENT    &kp DOLLAR  &kp CARET  &kp N4        &kp N5      &kp N6  &kp COMMA  &none
+&trans  &kp LC(LA(DELETE))  &idea_find_file  &kp ASTERISK  &kp AMPERSAND  &none       &none      &kp N1        &kp N2      &kp N3  &trans     &none
+                                             &trans        &trans         &trans      &trans     &kp NUMBER_0  &kp PERIOD
             >;
         };
 
         mod_nav_layer {
             bindings = <
-&trans  &trans  &trans  &trans         &trans         &trans  &trans          &kp F7          &kp F11        &kp F12          &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
-&trans  &trans  &trans  &trans         &trans         &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW  &username          &work_pwd
-&trans  &trans  &trans  &trans         &trans         &trans  &kp LA(LS(H))   &kp LS(LA(J))   &kp LA(LS(K))  &kp LA(LS(L))    &trans             &trans
-                        &kp LA(SPACE)  &kp LG(SPACE)  &trans  &trans          &trans          &trans
+&kp F1  &kp F2  &kp F3  &kp F4         &kp F5         &kp F6  &kp F7          &kp F8             &kp F9           &kp F10          &kp F11  &kp F12
+&trans  &trans  &trans  &trans         &trans         &trans  &kp LEFT_ARROW  &kp DOWN_ARROW     &kp UP_ARROW     &kp RIGHT_ARROW  &hey     &trans
+&trans  &trans  &trans  &trans         &trans         &trans  &trans          &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE       &trans   &trans
+                        &kp LA(SPACE)  &kp LG(SPACE)  &trans  &trans          &trans             &trans
             >;
         };
 
         system_layer {
             bindings = <
-&bootloader  &trans         &trans         &trans         &trans         &trans         &trans        &trans          &trans        &trans  &trans  &trans
-&trans       &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &out OUT_USB  &out OUT_BLE    &out OUT_TOG  &trans  &trans  &trans
-&trans       &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans  &trans  &trans
-                                           &trans         &trans         &trans         &trans        &trans          &trans
+&tog 1  &trans         &trans         &trans         &trans         &trans         &trans        &trans          &trans        &trans  &trans  &bootloader
+&trans  &bt BT_SEL 4   &bt BT_SEL 3   &bt BT_SEL 2   &bt BT_SEL 1   &bt BT_SEL 0   &out OUT_USB  &out OUT_BLE    &out OUT_TOG  &trans  &trans  &trans
+&trans  &bt BT_DISC 4  &bt BT_DISC 3  &bt BT_DISC 2  &bt BT_DISC 1  &bt BT_DISC 0  &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans  &trans  &trans
+                                      &trans         &trans         &trans         &trans        &trans          &trans
             >;
         };
     };
