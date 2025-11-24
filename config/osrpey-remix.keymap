@@ -11,12 +11,12 @@
 
         left_input_source {
             bindings = <&kp CAPSLOCK>;
-            key-positions = <38 17>;
+            key-positions = <38 16>;
         };
 
         right_input_source {
             bindings = <&kp CAPSLOCK>;
-            key-positions = <39 18>;
+            key-positions = <39 19>;
         };
 
         escape_left {
@@ -72,13 +72,6 @@
     };
 
     behaviors {
-        plus_minus: plus_minus {
-            compatible = "zmk,behavior-tap-dance";
-            label = "PLUS_MINUS";
-            #binding-cells = <0>;
-            bindings = <&kp PLUS>, <&kp MINUS>;
-        };
-
         backspace_delete: backspace_delete {
             compatible = "zmk,behavior-mod-morph";
             label = "BACKSPACE_DELETE";
